@@ -1,0 +1,10 @@
+program: main.o freq_func.o trie_func.o
+	gcc -o program freq_func.o trie_func.o
+main.o: main.c
+	gcc -c main.c
+freq_func: freq_func.c
+	gcc -c freq_func.c
+trie_func: trie_func.c
+	gcc -c trie_func.c
+clean:
+	rm -f *.o program
